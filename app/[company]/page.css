@@ -1,0 +1,46 @@
+.proj-section-header.proj-header-bottom {
+  margin-bottom: 1rem;
+}
+
+.proj-section-header {
+  color: var(--grayiron400);
+}
+
+.faq12_component {
+  grid-column-gap: 8rem;
+  grid-row-gap: 3.75rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+}
+
+.faq13_component {
+  grid-column-gap: 8rem;
+  grid-row-gap: 3.75rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+}
+
+.faq14_component {
+  grid-column-gap: 8rem;
+  grid-row-gap: 3.75rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+}
+text-size-medium-18 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.text-span-37 {
+  color: var(--purple);
+  font-style: italic;
+}

@@ -1,0 +1,8 @@
+.padding-global {
+  aspect-ratio: auto;
+  object-fit: fill;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: static;
+  overflow: auto;
+}

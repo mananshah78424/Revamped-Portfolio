@@ -1,21 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: rgba(16, 16, 16, 1);
   --foreground: #171717;
+  --header-width-margin: 5rem;
+  --header-color: rgba(37, 37, 37, 0);
+  --header-top-size: 0rem;
+  --header-size: 100rem;
+  --header-height: 3.5rem;
+  --grayiron25: #fcfcfc;
+  --purple: #948fec;
+  --linkPurple: #8349ff;
+  --grayiron100: #f4f4f5;
+  --grayiron300: #d1d1d6;
+  --grayiron400: #a0a0ab;
+  --grayiron700: #3f3f46;
+  --grayiron500: #70707b;
+  --grayiron200: #e4e4e7;
+  --grayiron600: #51525c;
+  --grayiron900: #18181b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: rgba(16, 16, 16, 1);
     --foreground: #ededed;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'Kostic Roc Grotesk';
+  src: url('/fonts/kostic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk-Medium.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'System UI';
+  src: url('/fonts/sf-ui-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anton SC';
+  src: url('/fonts/AntonSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.titles {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.underline-link {
+  text-decoration: none;
+  color: var(--linkPurple);
+}
+
+.underline-link:hover {
+  text-decoration: underline;
+  color: var(--purple);
+}
+
+body {
+  /* color: var(--foreground);
+  background: var(--background); */
+  font-family: 'Kostic Roc Grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.dark-bg{
+   color: var(--foreground);
+  background: var(--background);
+}
+
+.padding-global {
+  aspect-ratio: auto;
+  object-fit: fill;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: static;
+  overflow: auto;
+}
+
+.padding-top {
+  padding-top: 3rem;
+}
+
+.text-span-21 {
+  color: var(--purple);
+}
+
+.container-large {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padding-section-large {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.padding-section-medium {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.margin-small {
+  margin: 1.5rem;
+}
+
+.margin-xsmall {
+  margin: 1rem;
+}
+
+.margin-xxsmall {
+  margin: 0.5rem;
+}
+
+.margin-xxlarge {
+  margin: 5rem;
+}
+
+.margin-bottom {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Done with common */
+
+.work_hero-header_component {
+  grid-column-gap: 5rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  display: grid;
+}
+
+/* Carousel */
+
+.image {
+  min-width: 2rem;
+  max-width: 10%;
+  min-height: 2rem;
+  max-height: 2rem;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+/* Projects */
+
+.project-card-container {
+  background: rgb(32, 31, 34);
+  overflow: hidden;
+}
+
+/* Company Page */
+
+.padding-global-proj {
+  background-color: var(--grayiron900);
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.project_1_portfolio-header_component {
+  flex-direction: column;
+  height: 100svh;
+  min-height: 100svh;
+  display: flex;
+}
+
+.project_1_portfolio-header_image-wrapper {
+  flex: 1;
+  order: 0;
+  align-self: auto;
+  position: relative;
+}
+
+.spacer-tiny {
+  border-style: solid none none;
+  border-width: 1px;
+  border-color: var(--grayiron700);
+  border-radius: 1px;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0.25rem;
+}
+
+.spacer-tiny-white {
+  border-style: solid none none;
+  border-width: 1px;
+  border-color: var(--grayiron300);
+  border-radius: 1px;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0.25rem;
+}
+
+.project_2_feature_component {
+  grid-column-gap: 5rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+}
+
+.project_2_feature_item-list {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.proj-section-explain {
+  color: var(--grayiron300);
+  text-align: left;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.project_1_portfolio-header_content-wrapper {
+  grid-column-gap: 5rem;
+  grid-row-gap: 5rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1.5fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+}
+.project_1_portfolio-header_metatag-list {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.bg-yellow {
+  background-color: rgb(254, 252, 0);
+}
+
+.bg-dark {
+  background-color: rgb(30, 30, 30);
+}
+
+.bg-companies {
+  background-color: var(--grayiron900);
+}
+
+
+
+
+/* Add these styles to your global CSS file */
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.animate-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add a stagger effect for children if needed */
+.animate-section.animate-in > * {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Add different animation delays for each section */
+.portfolio_about { transition-delay: 0.1s; }
+.portfolio_work { transition-delay: 0.1s; }
+.portfolio_projects { transition-delay: 0.1s; }
+.portfolio_skills { transition-delay: 0.1s; }
+.portfolio_footer { transition-delay: 0.1s; }

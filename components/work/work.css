@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.work-container {
+  /* background-color: rgba(178, 0, 255, 0.03); */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* .blog-margin {
+  margin: 0 40px;
+} */
+
+.heading-work-status {
+  font-size: 20px;
+  /* color: rgba(0, 0, 0, 0.5); */
+}
+.work-padding-top {
+  padding-top: 30px;
+}
+
+.work-padding-left {
+  padding-left: 10px;
+}
+.work-width {
+  width: 83.3333333333%;
+}
+.work-image {
+  width: auto;
+  height: 80px;
+}
+
+.work-description-text {
+  font-family: 'System UI', sans-serif;
+  letter-spacing: 0.2px;
+  font-weight: 100;
+}

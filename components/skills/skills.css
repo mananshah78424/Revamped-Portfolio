@@ -1,0 +1,20 @@
+.logo5_component {
+  grid-column-gap: 1rem;
+  grid-row-gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+}
+
+.logo5_logo {
+  max-height: 6.5rem;
+}
+
+.logo5_logo_gif{
+    width: 100px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}

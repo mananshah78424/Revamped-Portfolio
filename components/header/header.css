@@ -1,0 +1,85 @@
+:root {
+  --header-size: 100%;
+  --header-height: 3rem;
+  --header-width-margin: 1rem;
+  --grayiron25: rgba(16, 16, 16, 0.25);
+}
+
+.navbar_component,
+.navbar_container {
+  color: rgba(16, 16, 16, 1);
+}
+
+.dark_theme {
+  color: white;
+}
+
+.navbar_component {
+  max-width: var(--header-size);
+  min-height: var(--header-height);
+  padding-right: var(--header-width-margin);
+  padding-left: var(--header-width-margin);
+  text-align: center;
+  align-items: center;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  position: relative;
+  top: 1rem;
+}
+
+.navbar_container {
+  justify-content: space-between;
+  align-items: center;
+  /* width: 80%; */
+  height: 100%;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+}
+
+.navbar_menu {
+  display: flex;
+  flex-direction: row;
+  flex: 0 auto;
+  justify-content: flex-end;
+}
+
+.w-nav-menu {
+  float: right;
+  align-items: center;
+}
+
+.navbar_link {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.w-nav-link {
+  vertical-align: top;
+  text-align: left;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-block_header {
+  object-fit: fill;
+  flex: 0 auto;
+  order: 0;
+  align-self: auto;
+  min-width: 2rem;
+  max-width: 10%;
+  min-height: 2rem;
+  max-height: 2rem;
+  margin: 0.5rem 1rem;
+  padding: 0;
+  display: block;
+}
+
+.header-logo{
+  font-family: 'Anton SC', sans-serif;
+  font-size: 2.3rem;
+}
