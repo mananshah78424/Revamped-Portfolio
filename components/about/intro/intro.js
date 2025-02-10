@@ -3,6 +3,7 @@ import './intro.css';
 import React, { useState, useEffect } from 'react';
 import { aboutMe } from '../../../utils/text';
 import FormmatedText from '@/utils/FormattedText';
+import Carousel from '../slideshow/carousel';
 
 const Intro = () => {
   const phrases = [
@@ -53,24 +54,34 @@ const Intro = () => {
   }, [typingIndex, isDeleting, currentPhraseIndex]);
 
   return (
-    <header className="about_intro_container">
-      <div className="padding-top">
-        <div className="w-layout-grid work_hero-header_component">
-          <h1 className="intro-heading">
-            <FormmatedText text={aboutMe.intro} />
-            <br />
-            <span className="text-span-21">{aboutMe.role}.</span>{' '}
-            <FormmatedText text="Also "></FormmatedText>
-            <span className="typed-text">{displayText}</span>
-            <span
-              className={`typed-cursor ${cursorVisible ? 'opacity-100' : 'opacity-0'}`}
-            >
-              <FormmatedText text="_"></FormmatedText>
-            </span>
-          </h1>
+    <div className="flex flex-col items-center gap-24">
+      <div className="relative flex h-fit w-full flex-col items-center justify-between">
+        <div className="flex w-full flex-col mt-[7rem] gap-12 md:flex-row md:justify-between">
+          <div className="flex w-full flex-col gap-4 md:w-fit md:items-start">
+            {/* Background Blur Effect */}
+            <div className="absolute -top-10 left-0 right-0 flex justify-center">
+              <div className="intro-name"></div>
+            </div>
+
+            {/* Name and Title */}
+            <div className="relative flex flex-col items-center md:items-start text-center md:text-left">
+              <span className="w-min text-7xl font-bold text-black drop-shadow-2xl dark:text-neutral-50 md:w-max z-10 font-ui-sans">
+                Manan Shah,
+              </span>
+              <span className="flex w-full items-center justify-center text-2xl text-neutral-400 md:min-h-fit md:justify-start md:text-3xl mt-4">
+                <span className="rubik-font">Full Stack Developer</span>
+                <span className="styles-module_blinkingCursor__yugAC styles-module_blinking__9VXRT"></span>
+              </span>
+            </div>
+          </div>
+
+          {/* Right-side Carousel */}
+          <div className="hidden mt-[5rem] mr-[12rem] md:flex flex-1 items-center justify-end">
+            <Carousel />
+          </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

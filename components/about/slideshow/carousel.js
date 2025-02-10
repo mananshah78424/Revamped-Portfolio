@@ -104,7 +104,7 @@ const Carousel = () => {
                 className="w-[60px] h-[60px] m-[10px]"
               />
               <figcaption>
-                <h4>
+                <h4 className="instagram_username">
                   <FormmatedText text={carouselText.username} />
                 </h4>
               </figcaption>
@@ -124,14 +124,14 @@ const Carousel = () => {
               </button>
               <RippleButton className="comment-button">
                 <img
-                  src="https://img.icons8.com/?size=100&id=143&format=png&color=000000"
+                  src="https://img.icons8.com/?size=100&id=143&format=png&color=ffffff"
                   className="w-[2em] h-[2em] mr-2"
                   alt="Comment"
                 />
               </RippleButton>
               <RippleButton className="share-button">
                 <img
-                  src="https://img.icons8.com/?size=100&id=60700&format=png&color=000000"
+                  src="https://img.icons8.com/?size=100&id=60700&format=png&color=ffffff"
                   className="w-[2em] h-[2em]"
                   alt="Share"
                 />
@@ -140,7 +140,7 @@ const Carousel = () => {
             <div className="right">
               <RippleButton className="share-button">
                 <img
-                  src="https://img.icons8.com/?size=100&id=25157&format=png&color=000000"
+                  src="https://img.icons8.com/?size=100&id=25157&format=png&color=ffffff"
                   className="w-[2em] h-[2em]"
                   alt="Save"
                 />

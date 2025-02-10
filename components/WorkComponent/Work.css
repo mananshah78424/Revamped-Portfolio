@@ -1,0 +1,9 @@
+.work-main-page {
+  color: hsl(var(--muted-foreground));
+}
+.sans-font {
+  font-family: 'Open Sans';
+}
+.small-role-detail {
+  font-family: 'Open Sans';
+}

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -23,6 +25,7 @@
   --grayiron200: #e4e4e7;
   --grayiron600: #51525c;
   --grayiron900: #18181b;
+  --muted-foreground: 0 0% 63.9%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +63,38 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/NunitoSans.ttf') format('truetype');
+}
+
+.caviet-font {
+  font-family: 'Caveat', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.rubik-font {
+  font-family: 'Rubik', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.font-ui-sans {
+  font-family: 'System UI';
+}
+
+.about-detailed-info {
+  font-weight: 100 !important;
+  font-family: 'System UI';
+  color: hsl(var(--muted-foreground));
+}
+
 .titles {
   margin-top: 0;
   margin-bottom: 0;
@@ -80,15 +115,17 @@
 }
 
 body {
-  /* color: var(--foreground);
-  background: var(--background); */
+  color: var(--foreground);
+  background: var(--grayiron900);
+  --tw-bg-opacity: 1;
+  background-color: rgba(6, 6, 6, var(--tw-bg-opacity));
   font-family: 'Kostic Roc Grotesk', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-.dark-bg{
-   color: var(--foreground);
+.dark-bg {
+  color: var(--foreground);
   background: var(--background);
 }
 
@@ -102,7 +139,7 @@ body {
 }
 
 .padding-top {
-  padding-top: 3rem;
+  padding-top: 6rem;
 }
 
 .text-span-21 {
@@ -129,7 +166,7 @@ h1 {
   line-height: 1.2;
 }
 
-h3 {
+.custom-h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2.5rem;
@@ -302,9 +339,6 @@ h6 {
   background-color: var(--grayiron900);
 }
 
-
-
-
 /* Add these styles to your global CSS file */
 
 .animate-section {
@@ -335,8 +369,34 @@ h6 {
 }
 
 /* Optional: Add different animation delays for each section */
-.portfolio_about { transition-delay: 0.1s; }
-.portfolio_work { transition-delay: 0.1s; }
-.portfolio_projects { transition-delay: 0.1s; }
-.portfolio_skills { transition-delay: 0.1s; }
-.portfolio_footer { transition-delay: 0.1s; }
+.portfolio_about {
+  transition-delay: 0.1s;
+}
+.portfolio_work {
+  transition-delay: 0.1s;
+}
+.portfolio_projects {
+  transition-delay: 0.1s;
+}
+.portfolio_skills {
+  transition-delay: 0.1s;
+}
+.portfolio_footer {
+  transition-delay: 0.1s;
+}
+
+.insta-div {
+  background: indianred;
+}
+
+.medium-div {
+  background: var(--grayiron300);
+}
+
+.color-purple {
+  color: var(--purple);
+}
+
+.color-yellow {
+  color: yellow;
+}

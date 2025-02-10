@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Header from '../components/header/header';
@@ -9,6 +9,8 @@ import Work from '../components/work/work';
 import Footer from '../components/footer/footer';
 import Link from 'next/link';
 import Skills from '../components/skills/skills';
+import LinkGrid from '@/components/about/linkGrid/linkGrid';
+import DetailedIntro from '@/components/about/intro/detailedIntro';
 
 const AnimatedSection = ({ children, className }) => {
   const sectionRef = useRef(null);
@@ -24,7 +26,7 @@ const AnimatedSection = ({ children, className }) => {
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -50px 0px',
       }
     );
 
@@ -40,10 +42,7 @@ const AnimatedSection = ({ children, className }) => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
-      className={`animate-section ${className}`}
-    >
+    <section ref={sectionRef} className={`animate-section ${className}`}>
       {children}
     </section>
   );
@@ -51,7 +50,7 @@ const AnimatedSection = ({ children, className }) => {
 
 export default function Home() {
   return (
-    <main className="portfolio">
+    <main className="portfolio container m-auto">
       <section className="portfolio_header padding-global">
         <Header />
       </section>
@@ -60,23 +59,15 @@ export default function Home() {
         <Intro />
       </AnimatedSection>
 
-      <AnimatedSection className="portfolio_about">
-        <Carousel />
+      <AnimatedSection className="portfolio_about padding-global padding-top">
+        <LinkGrid />
       </AnimatedSection>
 
       <AnimatedSection className="portfolio_work padding-global padding-top">
-        <Work />
+        <DetailedIntro />
       </AnimatedSection>
 
-      <AnimatedSection className="portfolio_projects padding-global padding-top" id="projects">
-        <Projects />
-      </AnimatedSection>
-
-      <AnimatedSection className="portfolio_skills padding-global padding-top">
-        <Skills />
-      </AnimatedSection>
-
-      <AnimatedSection className="portfolio_footer padding-global padding-top">
+      <AnimatedSection className="portfolio_footer padding-global padding-top mt-[4rem]">
         <Footer />
       </AnimatedSection>
     </main>

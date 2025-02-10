@@ -35,7 +35,8 @@
 }
 
 .work-description-text {
-  font-family: 'System UI', sans-serif;
+  /* font-family: 'System UI', sans-serif;
   letter-spacing: 0.2px;
-  font-weight: 100;
+  font-weight: 100; */
+  font-size: large;
 }

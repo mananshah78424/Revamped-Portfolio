@@ -19,7 +19,7 @@ export default async function CompanyPage({ params }) {
   }
 
   return (
-    <div className="padding-global bg-companies">
+    <div className="padding-global bg-companies rubik-font">
       <Header dark_theme="true"></Header>
       <div className="padding-top ">
         <header>
@@ -37,7 +37,7 @@ export default async function CompanyPage({ params }) {
                   <div className="project_1_portfolio-header_content-wrapper">
                     <div className="project_1_portfolio-header_content-left">
                       <div className="margin-bottom margin-small">
-                        <h1 className="text-white">{experience.name}</h1>
+                        <h1 className="text-white italic">{experience.name}</h1>
                       </div>
                       <div className="proj-section-explain">
                         {experience.description}
@@ -100,7 +100,7 @@ export default async function CompanyPage({ params }) {
             <div className="padding-section-large">
               <div className="w-layout-grid project_2_feature_component">
                 <div className="project_2_feature_content-left">
-                  <h3 className="text-white">{experience.mission}</h3>
+                  <h3 className="text-white text-[2rem]">{experience.mission}</h3>
                 </div>
 
                 <div className="project_2_feature_content-right">

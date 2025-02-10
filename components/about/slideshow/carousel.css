@@ -418,5 +418,8 @@
   }
 }
 
-
-
+.instagram_username {
+  color: var(--grayiron100);
+  color: hsl(var(--muted-foreground));
+  font-family: 'System UI';
+}

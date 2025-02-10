@@ -261,12 +261,12 @@ export const projectsInfo = {
       'My personal portfolio website built using Next.js and Tailwind CSS. The site features a responsive design, smooth animations, and interactive components. Users can view my projects, work experience, and skills.',
     technologies: ['Next.js', 'Tailwind CSS'],
     src: 'https://www.youtube.com/embed/rtA9n8ot7jA?autoplay=1&mute=1',
-    githubLink: 'https://github.com/mananshah78424/InstaS3Verse'
+    githubLink: 'https://github.com/mananshah78424/InstaS3Verse',
   },
 };
 
 export const aboutMe = {
-  intro: 'Hey! I am Manan Shah, an experienced ',
+  intro: 'Manan Shah,',
   role: 'Software Engineer',
 };
 

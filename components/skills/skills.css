@@ -13,8 +13,8 @@
   max-height: 6.5rem;
 }
 
-.logo5_logo_gif{
-    width: 100px;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+.logo5_logo_gif {
+  width: 100px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
