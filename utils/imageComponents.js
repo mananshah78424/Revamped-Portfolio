@@ -33,7 +33,7 @@ export const UciLogoImage = () => {
       decoding="async"
       data-nimg="1"
       className=" w-auto shrink-0 transition-all company-logo-image "
-      src="/images/work/logos/UCIlogo.png"
+      src="/images/work/logos/UCILogo.png"
     />
   );
 };
@@ -67,7 +67,7 @@ export const SportingSphereImage = () => {
       decoding="async"
       data-nimg="1"
       className="h-full w-full object-cover object-top"
-      src="/images/projects/sportingSphere.png"
+      src="/images/projects/sportingsphere.png"
     />
   );
 };
