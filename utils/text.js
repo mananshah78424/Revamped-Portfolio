@@ -316,7 +316,7 @@ export const projectsInfo = {
     description:
       'A chat application built using React, Node.js, and Socket.io. Users can create chat rooms, send messages, and view online users. The app features real-time updates, user authentication, and responsive design.',
     technologies: ['React', 'Node.js', 'Socket.io'],
-    src: 'images/sportingsphere.png',
+    src: '/images/sportingsphere.png',
     demoLink: '',
     githubLink: 'https://github.com/mananshah78424/SportingSphere',
   },

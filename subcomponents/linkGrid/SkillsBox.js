@@ -1,9 +1,4 @@
 import React from 'react';
-// import {
-//   GolangSVGIcon,
-//   PrimsaSVGIcon,
-//   JavaScriptIconSVG,
-// } from '@/utils/svgIcons';
 
 import {
   GolangSVG,
@@ -42,14 +37,6 @@ const RedisIcon = () => RedisSVG('1.2em', '1.2em');
 const TerraformIcon = () => TerraformSVG('1.2em', '1.2em');
 const NodeIcon = () => NodeSVG('1.2em', '1.2em');
 const TypeScriptIcon = () => TypeScriptSVG('1.2em', '1.2em');
-
-// Define two different sets of icons for each row
-// const FIRST_ROW_SKILLS = [
-//   { icon: JavaScriptIcon, title: 'JavaScript' },
-//   { icon: GolangIcon, title: 'Golang' },
-// ];
-
-// const SECOND_ROW_SKILLS = [{ icon: PrismaIcon, title: 'Prisma' }];
 
 const FIRST_ROW_SKILLS = [
   { icon: JavaScriptIcon, title: 'JavaScript' },

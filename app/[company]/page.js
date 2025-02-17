@@ -45,7 +45,6 @@ async function getData(company) {
 
 export default async function CompanyPage({ params }) {
   const experience = await getData(params.company);
-  console.log(experience);
 
   if (!experience) {
     return <PageNotFound></PageNotFound>;

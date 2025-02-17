@@ -6,7 +6,25 @@ import { GitHubContributionBoxes } from '@/subcomponents/linkGrid/GithubContribu
 import { SkillsBox } from '@/subcomponents/linkGrid/SkillsBox';
 import { SocialMediaBoxes } from '@/subcomponents/linkGrid/SocialMediaBoxes';
 const GithubIcon = () => GithubIconSVG('1.2em', '1.2em');
-
+import {
+  GolangSVG,
+  PrismaSVG,
+  JavaScriptSVG,
+  NextJsSVG,
+  ReactSVG,
+  TailwindSVG,
+  DockerSVG,
+  PostgresSVG,
+  MySQLSVG,
+  AWSSVG,
+  SpringbootSVG,
+  JavaSVG,
+  PythonSVG,
+  RedisSVG,
+  TerraformSVG,
+  NodeSVG,
+  TypeScriptSVG,
+} from '@/utils/svgIcons';
 // import {
 //   DockerIconSmallSVG,
 //   MySQLSVGIcon,
@@ -15,6 +33,69 @@ const GithubIcon = () => GithubIconSVG('1.2em', '1.2em');
 //   ReactSmallSVGIcon,
 //   RedisIconBigSVGIcon,
 // } from '@/utils/svgIcons';
+
+const GolangIcon = () => GolangSVG('1.2em', '1.2em');
+const PrismaIcon = () => PrismaSVG('1.2em', '1.2em');
+const JavaScriptIcon = () => JavaScriptSVG('1.2em', '1.2em');
+const NextJsIcon = () => NextJsSVG('1.2em', '1.2em');
+const ReactIcon = () => ReactSVG('1.2em', '1.2em');
+const TailwindIcon = () => TailwindSVG('1.2em', '1.2em');
+const DockerIcon = () => DockerSVG('1.2em', '1.2em');
+const PostgresIcon = () => PostgresSVG('1.2em', '1.2em');
+const MySQLIcon = () => MySQLSVG('1.2em', '1.2em');
+const AWSIcon = () => AWSSVG('1.2em', '1.2em');
+const SpringbootIcon = () => SpringbootSVG('1.2em', '1.2em');
+const JavaIcon = () => JavaSVG('1.2em', '1.2em');
+const PythonIcon = () => PythonSVG('1.2em', '1.2em');
+const RedisIcon = () => RedisSVG('1.2em', '1.2em');
+const TerraformIcon = () => TerraformSVG('1.2em', '1.2em');
+const NodeIcon = () => NodeSVG('1.2em', '1.2em');
+const TypeScriptIcon = () => TypeScriptSVG('1.2em', '1.2em');
+
+const FIRST_ROW_SKILLS = [
+  { icon: JavaScriptIcon, title: 'JavaScript' },
+  { icon: GolangIcon, title: 'Golang' },
+  { icon: PrismaIcon, title: 'Prisma' },
+  { icon: NextJsIcon, title: 'NextJs' },
+  { icon: ReactIcon, title: 'React' },
+  { icon: TypeScriptIcon, title: 'TypeScript' },
+  { icon: NodeIcon, title: 'Node' },
+  { icon: TerraformIcon, title: 'Terraform' },
+  { icon: RedisIcon, title: 'Redis' },
+];
+const SECOND_ROW_SKILLS = [
+  { icon: TailwindIcon, title: 'Tailwind' },
+  { icon: DockerIcon, title: 'Docker' },
+  { icon: PostgresIcon, title: 'Postgres' },
+  { icon: MySQLIcon, title: 'MySQL' },
+  { icon: AWSIcon, title: 'AWS' },
+  { icon: SpringbootIcon, title: 'Springboot' },
+  { icon: PythonIcon, title: 'Python' },
+];
+
+// Reusable icon component
+const SkillIcon = ({ Icon, title }) => (
+  <div title={title} className="flex items-center justify-center text-4xl">
+    <Icon />
+  </div>
+);
+
+// Reusable marquee row component that takes a specific set of skills
+const MarqueeRow = ({ skills, reverse = false }) => (
+  <div
+    data-direction="left"
+    data-reverse={reverse}
+    className="flex shrink-0 animate-marquee-up flex-col justify-around gap-4 [--gap:1rem] data-[direction='left']:animate-marquee-left data-[direction='left']:flex-row data-[reverse='true']:direction-reverse data-[pause-on-hover='true']:group-hover:[animation-play-state:paused]"
+  >
+    {skills.map((skill, index) => (
+      <SkillIcon
+        key={`${skill.title}-${index}`}
+        Icon={skill.icon}
+        title={skill.title}
+      />
+    ))}
+  </div>
+);
 
 const LinkGrid = () => {
   return (
@@ -244,10 +325,143 @@ const LinkGrid = () => {
                 </div>
               </a>
             </div>
-            <SocialMediaBoxes></SocialMediaBoxes>
+            <div className="flex w-full flex-col gap-3">
+              <div className="grid grid-cols-2 gap-2 rubik-font">
+                <a
+                  href="https://linkedin.com/in/mananshah21"
+                  className="flex h-[4.125rem] w-full transform-gpu flex-col items-center justify-center rounded-lg bg-[#2867b2] text-white duration-500 hover:scale-[.97] rubik-font"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    className="text-2xl"
+                  >
+                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+                  </svg>
+                  <p className="-rotate-3 text-[12px] text-white/90">
+                    (serious stuff)
+                  </p>
+                </a>
+                <a
+                  href="https://www.instagram.com/man_annn/"
+                  className="flex h-[4.125rem] w-full transform-gpu flex-col items-center justify-center rounded-lg bg-red-400 text-white duration-500 hover:scale-95 rubik-font insta-div"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.3em"
+                    height="1.3em"
+                    fill="currentColor"
+                    viewBox="0 0 56 56"
+                    className="text-2xl"
+                  >
+                    <radialGradient
+                      id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
+                      cx="19.38"
+                      cy="42.035"
+                      r="44.899"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stopColor="#fd5"></stop>
+                      <stop offset=".328" stopColor="#ff543f"></stop>
+                      <stop offset=".348" stopColor="#fc5245"></stop>
+                      <stop offset=".504" stopColor="#e64771"></stop>
+                      <stop offset=".643" stopColor="#d53e91"></stop>
+                      <stop offset=".761" stopColor="#cc39a4"></stop>
+                      <stop offset=".841" stopColor="#c837ab"></stop>
+                    </radialGradient>
+                    <path
+                      fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                      d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                    ></path>
+                    <radialGradient
+                      id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
+                      cx="11.786"
+                      cy="5.54"
+                      r="29.813"
+                      gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stopColor="#4168c9"></stop>
+                      <stop
+                        offset=".999"
+                        stopColor="#4168c9"
+                        stopOpacity="0"
+                      ></stop>
+                    </radialGradient>
+                    <path
+                      fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                      d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+                    ></path>
+                    <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
+                    <path
+                      fill="#fff"
+                      d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+                    ></path>
+                  </svg>
+                  <p className="text-[12px] text-white/55 ">(share reels ;)</p>
+                </a>
+                <a
+                  href=""
+                  className="flex h-[4.125rem] w-full transform-gpu flex-col items-center justify-center rounded-lg bg-[#2867b2] text-white duration-500 hover:scale-[.97] rubik-font medium-div"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.3em"
+                    height="1.3em"
+                    viewBox="0 0 50 50"
+                  >
+                    <path d="M 31.494141 5.1503906 L 5.9277344 7.0019531 A 1.0001 1.0001 0 0 0 5.9042969 7.0039062 A 1.0001 1.0001 0 0 0 5.8652344 7.0097656 A 1.0001 1.0001 0 0 0 5.7929688 7.0214844 A 1.0001 1.0001 0 0 0 5.7636719 7.0292969 A 1.0001 1.0001 0 0 0 5.7304688 7.0371094 A 1.0001 1.0001 0 0 0 5.6582031 7.0605469 A 1.0001 1.0001 0 0 0 5.6113281 7.0800781 A 1.0001 1.0001 0 0 0 5.5839844 7.0917969 A 1.0001 1.0001 0 0 0 5.4335938 7.1777344 A 1.0001 1.0001 0 0 0 5.4082031 7.1933594 A 1.0001 1.0001 0 0 0 5.3476562 7.2421875 A 1.0001 1.0001 0 0 0 5.3359375 7.2539062 A 1.0001 1.0001 0 0 0 5.2871094 7.2988281 A 1.0001 1.0001 0 0 0 5.2578125 7.3320312 A 1.0001 1.0001 0 0 0 5.2148438 7.3828125 A 1.0001 1.0001 0 0 0 5.1992188 7.4023438 A 1.0001 1.0001 0 0 0 5.15625 7.4648438 A 1.0001 1.0001 0 0 0 5.1445312 7.484375 A 1.0001 1.0001 0 0 0 5.1074219 7.5488281 A 1.0001 1.0001 0 0 0 5.09375 7.5761719 A 1.0001 1.0001 0 0 0 5.0644531 7.6484375 A 1.0001 1.0001 0 0 0 5.0605469 7.65625 A 1.0001 1.0001 0 0 0 5.015625 7.8300781 A 1.0001 1.0001 0 0 0 5.0097656 7.8613281 A 1.0001 1.0001 0 0 0 5.0019531 7.9414062 A 1.0001 1.0001 0 0 0 5.0019531 7.9453125 A 1.0001 1.0001 0 0 0 5 8 L 5 33.738281 C 5 34.76391 5.3151542 35.766862 5.9042969 36.607422 A 1.0001 1.0001 0 0 0 5.953125 36.671875 L 12.126953 44.101562 A 1.0001 1.0001 0 0 0 12.359375 44.382812 L 12.75 44.851562 A 1.0006635 1.0006635 0 0 0 12.917969 45.011719 C 13.50508 45.581386 14.317167 45.917563 15.193359 45.861328 L 42.193359 44.119141 C 43.762433 44.017718 45 42.697027 45 41.125 L 45 15.132812 C 45 14.209354 44.565523 13.390672 43.904297 12.839844 A 1.0008168 1.0008168 0 0 0 43.748047 12.695312 L 43.263672 12.337891 A 1.0001 1.0001 0 0 0 43.0625 12.189453 L 34.824219 6.1132812 C 33.865071 5.4054876 32.682705 5.0641541 31.494141 5.1503906 z M 31.638672 7.1445312 C 32.352108 7.0927682 33.061867 7.29845 33.636719 7.7226562 L 39.767578 12.246094 L 14.742188 13.884766 C 13.880567 13.941006 13.037689 13.622196 12.425781 13.011719 L 12.423828 13.011719 L 8.2539062 8.8398438 L 31.638672 7.1445312 z M 7 10.414062 L 11.011719 14.425781 L 12 15.414062 L 12 40.818359 L 7.5390625 35.449219 C 7.1899317 34.947488 7 34.351269 7 33.738281 L 7 10.414062 z M 41.935547 14.134766 C 42.526748 14.096822 43 14.54116 43 15.132812 L 43 41.125 C 43 41.660973 42.59938 42.08847 42.064453 42.123047 L 15.064453 43.865234 C 14.770856 43.884078 14.506356 43.783483 14.314453 43.605469 A 1.0006635 1.0006635 0 0 0 14.3125 43.603516 C 14.3125 43.603516 14.310547 43.601562 14.310547 43.601562 C 14.306465 43.597733 14.304796 43.59179 14.300781 43.587891 A 1.0006635 1.0006635 0 0 0 14.289062 43.572266 C 14.112238 43.393435 14 43.149431 14 42.867188 L 14 16.875 C 14 16.337536 14.39999 15.911571 14.935547 15.876953 L 41.935547 14.134766 z M 38.496094 19 L 33.421875 19.28125 C 32.647875 19.36125 31.746094 19.938 31.746094 20.875 L 33.996094 21.0625 L 33.996094 31.753906 L 26.214844 19.751953 L 20.382812 20.080078 C 19.291812 20.160078 18.994141 20.970953 18.994141 22.001953 L 21.244141 22.001953 L 21.244141 37.566406 C 21.244141 37.566406 20.191844 37.850406 19.839844 37.941406 C 19.091844 38.134406 18.994141 38.784906 18.994141 39.253906 C 18.994141 39.253906 22.746656 39.065547 24.472656 38.935547 C 26.431656 38.785547 26.496094 37.472656 26.496094 37.472656 L 24.246094 37.003906 L 24.246094 25.470703 C 24.246094 25.470703 29.965844 34.660328 31.714844 37.361328 C 32.537844 38.630328 33.152375 38.878906 34.234375 38.878906 C 35.122375 38.878906 35.962141 38.616594 36.994141 38.058594 L 36.994141 20.697266 C 36.994141 20.697266 37.184203 20.687141 37.783203 20.494141 C 38.466203 20.273141 38.496094 19.656 38.496094 19 z"></path>
+                  </svg>
+                  <p className="text-[12px] text-white/90">
+                    (documenting stuff)
+                  </p>
+                </a>
+                <a
+                  href="https://medium.com/@manan78424"
+                  className="flex h-[4.125rem] w-full transform-gpu flex-col items-center justify-center rounded-lg bg-[rgb(28,29,31)] text-white duration-500 hover:scale-[.97] rubik-font"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.6em"
+                    height="1.6em"
+                    viewBox="0 0 50 50"
+                  >
+                    <path d="M15 14c6.065 0 11 4.935 11 11s-4.935 11-11 11S4 31.065 4 25 8.935 14 15 14M15 12C7.82 12 2 17.82 2 25s5.82 13 13 13 13-5.82 13-13S22.18 12 15 12L15 12zM35.5 15c2.124 0 4.5 4.277 4.5 10s-2.376 10-4.5 10S31 30.723 31 25 33.376 15 35.5 15M35.5 13c-3.59 0-6.5 5.373-6.5 12s2.91 12 6.5 12S42 31.627 42 25 39.09 13 35.5 13L35.5 13zM46.377 15.667h.005H46.377M45.5 18.577C45.78 20.158 46 22.327 46 25s-.22 4.842-.5 6.423C45.22 29.842 45 27.673 45 25S45.22 20.158 45.5 18.577M45.5 14c-1.381 0-2.5 4.925-2.5 11s1.119 11 2.5 11S48 31.075 48 25 46.881 14 45.5 14L45.5 14z"></path>
+                  </svg>
+                  <p className="text-[12px] text-white">(Articles stuff)</p>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <SkillsBox></SkillsBox>
+          <div className="cols-span-3">
+            <div className="flex h-full flex-col gap-3 overflow-hidden rounded-xl p-1">
+              {/* First marquee group with first set of skills */}
+              <div
+                className="group flex flex-col gap-4 overflow-hidden data-[direction='left']:flex-row"
+                data-direction="left"
+              >
+                <MarqueeRow skills={FIRST_ROW_SKILLS} />
+                <MarqueeRow skills={FIRST_ROW_SKILLS} />
+              </div>
+
+              {/* Second marquee group with second set of skills */}
+              <div
+                className="group flex flex-col gap-4 overflow-hidden data-[direction='left']:flex-row"
+                data-direction="left"
+              >
+                <MarqueeRow skills={SECOND_ROW_SKILLS} reverse />
+                <MarqueeRow skills={SECOND_ROW_SKILLS} reverse />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="col-span-3 space-y-3 md:ml-3">
