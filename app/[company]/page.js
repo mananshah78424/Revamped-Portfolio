@@ -12,8 +12,22 @@ const highlightWords = (text) => {
     'Gemini-1.5-pro': 'text-indigo-500 font-semibold',
     'Large Language Model (LLM)': 'text-green-500 font-semibold',
     'Google Cloud Platform (GCP)': 'text-blue-500 font-semibold',
+    'Vue.js': 'text-green-500 font-semibold',
+    'React.js': 'text-blue-500 font-semibold',
+    'API': 'text-yellow-500 font-semibold',
+    'TypeScript': 'text-blue-500 font-semibold',
+    'Hapi.js': 'text-blue-500 font-semibold',
+    '50M+': 'text-yellow-500 font-semibold',
+    '25%': 'text-yellow-500 font-semibold',
+    'Datadog': 'text-blue-500 font-semibold',
+    'Jest': 'text-red-500 font-semibold',
+    'Cypress': 'text-green-500 font-semibold',
+    'USPS': 'text-blue-500 font-semibold',
     Postgre: 'text-yellow-500 font-semibold',
     PostgreSQL: 'text-yellow-500 font-semibold',
+    'Dockerized': 'text-cyan-500 font-semibold',
+    'ETL pipeline': 'text-pink-500 font-semibold',
+    '25,000,000': 'text-yellow-500 font-semibold',
     'Node.js': 'text-teal-500 font-semibold',
     JavaScript: 'text-orange-500 font-semibold',
     Python: 'text-red-500 font-semibold',
@@ -137,6 +151,7 @@ export default async function CompanyPage({ params }) {
                   </h3>
                 </div>
 
+                {experience.workDone && (
                 <div className="project_2_feature_content-right">
                   <div className="w-layout-grid project_2_feature_item-list">
                     <div className="margin-bottom margin-xxsmall">
@@ -156,6 +171,7 @@ export default async function CompanyPage({ params }) {
                     </div>
                   </div>
                 </div>
+                )}
               </div>
             </div>
           </div>

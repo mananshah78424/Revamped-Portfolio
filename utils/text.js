@@ -238,51 +238,9 @@ export const companyInfo = {
     role: 'Master of Computer Science',
     //replace hyphen with en dash
     duration: 'September 2022 - December 2023',
-    description:
-      'Centene Corporation is a leading healthcare enterprise committed to helping people live healthier lives. Centene offers affordable and high-quality products to more than 1 in 15 individuals across the nation, including Medicaid and Medicare members.',
-    team: 'Machine Learning Intern',
-    website: 'https://www.centene.com/',
-    mission:
-      'Centene was looking for a Machine Learning Intern to develop and maintain machine learning models to improve the efficiency of their healthcare services.',
-    workDone: [
-      '      Designed a Named-Entity Recognition (NER) model to extract medical information using SpaCy and Python from unstructured medical text, resulting in savings worth $25,000,000.',
-      'Built a real-time ETL pipeline for aggregating unstructured data from Databricks to Postgre from over 10 sources.',
-      'Dockerized the model, making it available to 8 different internal teams.',
-    ],
     mainImage: '/images/work/uci/uci.png',
-    skills: {
-      title: 'Technologies Used',
-      machine_learning: [
-        {
-          name: 'Python',
-          src: '/images/work/skills/python.gif',
-        },
-        {
-          name: 'SpaCy',
-          src: '/images/work/skills/spacy.png',
-        },
-        {
-          name: 'Databricks',
-          src: '/images/work/skills/databricks.png',
-        },
-      ],
-      data_processing: [
-        {
-          name: 'ETL',
-          src: '/images/work/skills/etl.png',
-        },
-        {
-          name: 'Docker',
-          src: '/images/work/skills/docker.png',
-        },
-      ],
-      database: [
-        {
-          name: 'PostgreSQL',
-          src: '/images/work/skills/postgresql.png',
-        },
-      ],
-    },
+    website: 'https://uci.edu',
+    team: "Master's in Computer Science",
   },
 };
 
@@ -316,7 +274,7 @@ export const projectsInfo = {
     description:
       'A chat application built using React, Node.js, and Socket.io. Users can create chat rooms, send messages, and view online users. The app features real-time updates, user authentication, and responsive design.',
     technologies: ['React', 'Node.js', 'Socket.io'],
-    src: '/images/sportingsphere.png',
+    src: '/images/projects/sportingsphere.png',
     demoLink: '',
     githubLink: 'https://github.com/mananshah78424/SportingSphere',
   },
