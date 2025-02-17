@@ -3,7 +3,6 @@ export const companyInfo = {
     name: 'Lob',
     location: 'San Francisco, CA',
     role: 'Software Engineer',
-    //replace hyphen with en dash
     duration: 'October 2024 – Current', // Copy-paste this en dash
 
     description:
@@ -102,6 +101,12 @@ export const companyInfo = {
     keyLearnings: {
       title: 'My Learnings',
       description: 'Reflection & Takeaways',
+      title: 'Building AI, Leading Teams, and Growing Along the Way',
+      firstPara:
+        'When I started working on the LLM chatbot, I knew it would be a challenge, but I didn’t expect just how much I would learn. Using GPT-3.5-turbo and Gemini-1.5-pro, I built a system capable of processing 10,000+ customer records on Google Cloud Platform (GCP) and PostgreSQL. Optimizing data flow and ensuring real-time responses pushed me to refine my approach to scalability and efficiency. But the real reward came when we saw a 96% drop in customer support response time—a clear sign that our chatbot was making a difference.',
+
+      secondPara:
+        'Beyond the technical side, this project also taught me the value of leadership and collaboration. I led a team of three in designing an intuitive frontend UI/UX using Node.js, JavaScript, and Python, making AI interactions seamless. Setting up a CI/CD pipeline with GCP Cloud Run, Docker, and GitHub reinforced the importance of automation in modern development. And perhaps the most fulfilling part? Mentoring an intern in Git, Agile, and software development—helping someone grow while growing myself. Looking back, this experience wasn’t just about building a chatbot; it was about building skills, relationships, and confidence in tackling complex problems.',
     },
     featuredArticles: {
       medium: {
@@ -184,7 +189,67 @@ export const companyInfo = {
       'Built a real-time ETL pipeline for aggregating unstructured data from Databricks to Postgre from over 10 sources.',
       'Dockerized the model, making it available to 8 different internal teams.',
     ],
+    keyLearnings: {
+      title: 'My Learnings',
+      description: 'Reflection & Takeaways',
+      firstPara:
+        'One of the most impactful lessons I learned during this project was the complexity of working with unstructured medical data. Building a Named-Entity Recognition (NER) model using SpaCy and Python taught me the importance of precision and scalability. I realized that handling real-world data requires more than just technical expertise; it requires an understanding of domain-specific nuances. The experience gave me a deeper appreciation for the delicate balance between data processing and interpretation, especially when the stakes involve medical information.',
+      secondPara:
+        'Another key takeaway was the value of building scalable and efficient systems. Designing the real-time ETL pipeline to aggregate data from Databricks to PostgreSQL reinforced how critical it is to ensure that data flows seamlessly across platforms, especially when pulling from multiple sources. This experience expanded my skills in managing real-time data pipelines and understanding the nuances of different data environments. Additionally, Dockerizing the model for multiple teams was a significant learning experience in making complex models accessible and reusable across diverse environments, ensuring the scalability and maintainability of solutions.',
+    },
     mainImage: '/images/work/centene/centene.png',
+    skills: {
+      title: 'Technologies Used',
+      machine_learning: [
+        {
+          name: 'Python',
+          src: '/images/work/skills/python.gif',
+        },
+        {
+          name: 'SpaCy',
+          src: '/images/work/skills/spacy.png',
+        },
+        {
+          name: 'Databricks',
+          src: '/images/work/skills/databricks.png',
+        },
+      ],
+      data_processing: [
+        {
+          name: 'ETL',
+          src: '/images/work/skills/etl.png',
+        },
+        {
+          name: 'Docker',
+          src: '/images/work/skills/docker.png',
+        },
+      ],
+      database: [
+        {
+          name: 'PostgreSQL',
+          src: '/images/work/skills/postgresql.png',
+        },
+      ],
+    },
+  },
+  uciBlog: {
+    name: 'University of California, Irvine',
+    location: 'Irvine, CA',
+    role: 'Master of Computer Science',
+    //replace hyphen with en dash
+    duration: 'September 2022 - December 2023',
+    description:
+      'Centene Corporation is a leading healthcare enterprise committed to helping people live healthier lives. Centene offers affordable and high-quality products to more than 1 in 15 individuals across the nation, including Medicaid and Medicare members.',
+    team: 'Machine Learning Intern',
+    website: 'https://www.centene.com/',
+    mission:
+      'Centene was looking for a Machine Learning Intern to develop and maintain machine learning models to improve the efficiency of their healthcare services.',
+    workDone: [
+      '      Designed a Named-Entity Recognition (NER) model to extract medical information using SpaCy and Python from unstructured medical text, resulting in savings worth $25,000,000.',
+      'Built a real-time ETL pipeline for aggregating unstructured data from Databricks to Postgre from over 10 sources.',
+      'Dockerized the model, making it available to 8 different internal teams.',
+    ],
+    mainImage: '/images/work/uci/uci.png',
     skills: {
       title: 'Technologies Used',
       machine_learning: [

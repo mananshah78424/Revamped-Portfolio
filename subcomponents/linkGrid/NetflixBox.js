@@ -1,7 +1,7 @@
 export const NetflixBox = () => {
   return (
     <a
-      href="https://letterboxd.com/mateusfg7/"
+      href="https://manansnetlifyclone.netlify.app/"
       target="_blank"
       className="relative flex h-full transform-gpu flex-col justify-between rounded-xl bg-[#131618] p-3 duration-500 hover:scale-[.97]"
     >

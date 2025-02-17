@@ -59,7 +59,7 @@ const Intro = () => {
         <div className="flex w-full flex-col mt-[7rem] gap-12 md:flex-row md:justify-between">
           <div className="flex w-full flex-col gap-4 md:w-fit md:items-start">
             {/* Background Blur Effect */}
-            <div className="absolute -top-10 left-0 right-0 flex justify-center">
+            <div className="absolute -top-10 left-0 right-0 flex justify-center hidden sm:inline">
               <div className="intro-name"></div>
             </div>
 

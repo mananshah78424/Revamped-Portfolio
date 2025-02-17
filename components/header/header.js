@@ -11,7 +11,6 @@ export default function Header({ dark_theme }) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      console.log(scrollPosition);
       setIsScrolled(scrollPosition > 150); // Change to circular after scrolling 100px
     };
 

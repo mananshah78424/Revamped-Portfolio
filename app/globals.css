@@ -400,3 +400,8 @@ h6 {
 .color-yellow {
   color: yellow;
 }
+
+.company-logo-image {
+  width: 64px;
+  height: 59px;
+}

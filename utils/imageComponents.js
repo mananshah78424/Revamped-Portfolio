@@ -4,11 +4,9 @@ export const ZebraLogoImage = () => {
     <img
       alt="Zebra Logo"
       loading="zplazy"
-      width="64"
-      height="64"
       decoding="async"
       data-nimg="1"
-      className="h-[49px] w-[60px] w-auto shrink-0 transition-all "
+      className="shrink-0 transition-all company-logo-image "
       src="images/work/logos/zebra_technologies_zoomed_logo.png"
     />
   );
@@ -19,11 +17,9 @@ export const CenteneLogoImage = () => {
     <img
       alt="Centene Logo"
       loading="zplazy"
-      width="64"
-      height="64"
       decoding="async"
       data-nimg="1"
-      className="h-[49px] w-[60px] w-auto shrink-0 transition-all "
+      className=" shrink-0 transition-all company-logo-image "
       src="images/work/logos/centene_corporation_logo.jpeg"
     />
   );
@@ -34,11 +30,9 @@ export const UciLogoImage = () => {
     <img
       alt="Centene Logo"
       loading="zplazy"
-      width="64"
-      height="64"
       decoding="async"
       data-nimg="1"
-      className="h-[49px] w-[60px] w-auto shrink-0 transition-all "
+      className=" w-auto shrink-0 transition-all company-logo-image "
       src="images/work/logos/UCIlogo.png"
     />
   );

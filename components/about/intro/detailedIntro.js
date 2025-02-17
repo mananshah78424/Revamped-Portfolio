@@ -1,12 +1,16 @@
+// import { AWSSVG, GoToLink, PythonSVG, WaveSVG } from '@/utils/svgIcons';
 import {
-  AWSIconSVG,
+  AWSSVG,
   GoToLink,
-  JavaScriptIconSVG,
-  PythonIconSVG,
-  TailWindSmallSVG,
+  JavaScriptSVG,
+  PythonSVG,
   WaveSVG,
+  TypeScriptSVG,
 } from '@/utils/svgIcons';
-
+const JavaScriptIcon = () => JavaScriptSVG('1.2em', '1.2em');
+const PythonIcon = () => PythonSVG('1.2em', '1.2em');
+const TypeScriptIcon = () => TypeScriptSVG('1.2em', '1.2em');
+const AWSIcon = () => AWSSVG('1.2em', '1.2em');
 const DetailedIntro = () => {
   return (
     <div className="about-detailed-info rubik-font">
@@ -33,7 +37,7 @@ const DetailedIntro = () => {
                 target="_blank"
                 className="inline-flex items-center gap-x-2 rounded-md border border-neutral-200 bg-neutral-200/30 px-1 text-sm transition hover:border-[rgba(240,219,79,.5)] hover:bg-[rgba(240,219,79,.1)] dark:border-neutral-800 dark:bg-neutral-800/30  dark:hover:border-[rgba(240,219,79,.5)] dark:hover:bg-[rgba(240,219,79,.1)] ml-2"
               >
-                <JavaScriptIconSVG></JavaScriptIconSVG>
+                <JavaScriptIcon></JavaScriptIcon>
                 <span className="text-base">Javascript</span>
               </a>
               ,{' '}
@@ -42,7 +46,7 @@ const DetailedIntro = () => {
                 target="_blank"
                 className="inline-flex items-center gap-x-2 rounded-md border border-neutral-200 bg-neutral-200/30 px-1 text-sm transition hover:border-[rgba(0,122,204,.5)] hover:bg-[rgba(0,122,204,.1)] dark:border-neutral-800 dark:bg-neutral-800/30 dark:hover:border-[rgba(0,122,204,.5)] dark:hover:bg-[rgba(0,122,204,.1)]"
               >
-                <TailWindSmallSVG></TailWindSmallSVG>
+                <TypeScriptIcon></TypeScriptIcon>
                 <span className="text-base">Typescript</span>
               </a>
               ,{' '}
@@ -51,7 +55,7 @@ const DetailedIntro = () => {
                 target="_blank"
                 className="inline-flex items-center gap-x-2 rounded-md border border-neutral-200 bg-neutral-200/30 px-1 text-sm transition hover:border-[rgba(255,232,115,.5)] hover:bg-[rgba(255,232,115,.1)] dark:border-neutral-800 dark:bg-neutral-800/30 dark:hover:border-[rgba(255,232,115,.5)] dark:hover:bg-[rgba(255,232,115,.1)]"
               >
-                <PythonIconSVG></PythonIconSVG>
+                <PythonIcon></PythonIcon>
                 <span className="text-base">Python</span>
               </a>{' '}
               and{' '}
@@ -60,7 +64,7 @@ const DetailedIntro = () => {
                 target="_blank"
                 className="inline-flex items-center gap-x-2 rounded-md border border-neutral-200 bg-neutral-200/30 px-1 text-sm transition hover:border-black/50 hover:bg-black/10 dark:border-neutral-800 dark:bg-neutral-800/30 hover:dark:border-white/50 hover:dark:bg-white/10"
               >
-                <AWSIconSVG></AWSIconSVG>
+                <AWSIcon></AWSIcon>
                 <span className="text-base">AWS</span>
               </a>{' '}
               ecosystem.

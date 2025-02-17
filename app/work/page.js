@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/footer/footer';
 import Header from '@/components/header/header';
 import WorkComponent from '@/components/WorkComponent/Work';
 
@@ -46,6 +47,9 @@ const WorkPage = () => {
       </section>
       <section className="portfolio_header padding-global">
         <WorkComponent />
+      </section>
+      <section className="portfolio_header padding-global">
+        <Footer />
       </section>
     </main>
   );

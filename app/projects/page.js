@@ -4,28 +4,62 @@ import {
   NikeClone,
   SportingSphereImage,
 } from '@/utils/imageComponents';
+
 import {
-  GithubIconSVG,
-  NextJSSmallSVG,
-  ReactSmallSVG,
-  TailwindCSSSmallSVG,
-  TailWindSmallSVG,
-  WebsiteIconSVG,
+  AWSSVG,
+  RedisSVG,
+  TypeScriptSVG,
+  TailwindSVG,
+  ReactSVG,
+  NextJsSVG,
+  DockerSVG,
+  NodeSVG,
+  PostgresSVG,
+  GolangSVG,
+  PrismaSVG,
+  JavaScriptSVG,
+  SpringbootSVG,
+  PythonSVG,
   WhiteDotSVG,
-  DockerIconSVG,
-  ReactGifSVGIcon,
-  PostgreSVGIcon,
-  MySQLSVGIcon,
-  AWSIconSVG,
-  GolangSVGIcon,
-  PrimsaSVGIcon,
-  SpringBootSVGIcon,
-  JavaGifIconSVG,
-  JavaScriptIconSVG,
-  RedisIconSVG,
-  TerraformIconSVG,
-  NodeIconSVG,
+  GithubIconSVG,
+  WebsiteIconSVG,
 } from '@/utils/svgIcons';
+
+const TypeScriptIcon = () => TypeScriptSVG('1.2em', '1.2em');
+const TailwindIcon = () => TailwindSVG('1.2em', '1.2em');
+const ReactIcon = () => ReactSVG('1.2em', '1.2em');
+const NextJsIcon = () => NextJsSVG('1.2em', '1.2em');
+const DockerIcon = () => DockerSVG('1.2em', '1.2em');
+const RedisIcon = () => RedisSVG('1.2em', '1.2em');
+const NodeIcon = () => NodeSVG('1.2em', '1.2em');
+const PostgreIcon = () => PostgresSVG('1.2em', '1.2em');
+const AWSIcon = () => AWSSVG('1.2em', '1.2em');
+const GolangIcon = () => GolangSVG('1.2em', '1.2em');
+const PrismaIcon = () => PrismaSVG('1.2em', '1.2em');
+const SpringBootIcon = () => SpringbootSVG('1.2em', '1.2em');
+const JavaScriptIcon = () => JavaScriptSVG('1.2em', '1.2em');
+const PythonIcon = () => PythonSVG('1.2em', '1.2em');
+const WhiteDotIcon = () => WhiteDotSVG('1.2em', '1.2em');
+const GithubIcon = () => GithubIconSVG('1.2em', '1.2em');
+const WebsiteIcon = () => WebsiteIconSVG('1.2em', '1.2em');
+
+// Tech stack icon mapping
+const techStackIcons = {
+  typescript: TypeScriptIcon,
+  tailwind: TailwindIcon,
+  react: ReactIcon,
+  nextjs: NextJsIcon,
+  docker: DockerIcon,
+  redis: RedisIcon,
+  nodejs: NodeIcon,
+  postgre: PostgreIcon,
+  aws: AWSIcon,
+  golang: GolangIcon,
+  prisma: PrismaIcon,
+  springboot: SpringBootIcon,
+  javascript: JavaScriptIcon,
+};
+
 import './projects.css';
 import {
   instaS3verseSkills,
@@ -81,21 +115,9 @@ const projects = [
   },
 ];
 
-// Tech stack icon mapping
-const techStackIcons = {
-  typescript: TailWindSmallSVG,
-  react: ReactSmallSVG,
-  nextjs: NextJSSmallSVG,
-  tailwind: TailwindCSSSmallSVG,
-  docker: DockerIconSVG,
-  redis: RedisIconSVG,
-  nodejs: NodeIconSVG,
-};
-
 const TechStack = ({ technologies }) => (
-  <span className="flex gap-3 data-[variant='compact']:text-base">
+  <span className="flex justify-center gap-3 sm:justify-start data-[variant='compact']:text-base">
     {technologies.map((tech, index) => {
-      console.log(tech);
       const IconComponent = techStackIcons[tech.toLowerCase()];
       return IconComponent ? (
         <span key={index} className="hover:cursor-pointer" title={tech}>
@@ -118,7 +140,7 @@ const ProjectLinks = ({ githubLink, websiteLink }) => (
       data-variant="full"
       className="flex items-center gap-2 rounded-2xl bg-[rgba(24,23,23,0.1)] p-2 text-[rgb(24,23,23)] data-[variant='full']:p-4 hover:bg-[rgb(24,23,23)] hover:text-[rgb(246,248,250)] dark:bg-[rgb(246,248,250,0.1)] dark:text-[rgb(246,248,250)] dark:hover:bg-[rgb(246,248,250)] hover:dark:text-[rgb(24,23,23)]"
     >
-      Source <GithubIconSVG />
+      Source <GithubIcon />
     </a>
     {websiteLink && (
       <a
@@ -128,7 +150,7 @@ const ProjectLinks = ({ githubLink, websiteLink }) => (
         data-variant="full"
         className="flex items-center gap-2 rounded-2xl bg-blue-700/10 p-2 text-blue-700 data-[variant='full']:p-4 hover:bg-blue-700 hover:text-neutral-50 dark:bg-blue-600/5 dark:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-neutral-50"
       >
-        Website <WebsiteIconSVG />
+        Website <WebsiteIcon />
       </a>
     )}
   </div>
@@ -152,7 +174,7 @@ const ProjectCard = ({
       <div>
         <div
           data-variant="full"
-          className="mb-10 flex flex-col items-center gap-2 data-[variant='full']:gap-5 dark:text-neutral-50 md:mb-4 md:data-[variant='full']:flex-row"
+          className="sm:mb-10 flex flex-col items-center gap-2 data-[variant='full']:gap-5 dark:text-neutral-50 md:mb-4 md:data-[variant='full']:flex-row"
         >
           <h2
             data-variant="full"
@@ -161,7 +183,7 @@ const ProjectCard = ({
             {title}
           </h2>
           <span className="hidden md:inline">
-            <WhiteDotSVG />
+            <WhiteDotIcon />
           </span>
           <p>{area}</p>
         </div>
@@ -193,7 +215,7 @@ const PageComponent = () => {
       <Header></Header>
       <div className="padding-top max-w-5xl m-auto project-main-page mb-[5rem]">
         <div className="flex animate-slide-from-down-and-fade-1 items-start justify-between">
-          <nav aria-label="breadcrumb" className="mb-4">
+          <nav aria-label="breadcrumb" className="mb-4 ml-4 md:ml-0">
             <ol className="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5">
               <li className="inline-flex items-center gap-1.5">
                 <a className="transition-colors hover:text-foreground" href="/">
@@ -234,7 +256,9 @@ const PageComponent = () => {
           </nav>
         </div>
 
-        <h2 className="font-semibold text-[30px]">Featured Projects</h2>
+        <h2 className="font-semibold text-[30px] ml-4 md:ml-0">
+          Featured Projects
+        </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((project, index) => (

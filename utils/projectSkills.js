@@ -12,6 +12,7 @@ export const sportingSphereSkills = [
   'lambda',
   'sqs',
   'cron',
+  'postgre',
 ];
 export const netflixCloneSkills = ['react', 'javascript', 'api', 'tailwind'];
 export const instaS3verseSkills = [
@@ -23,11 +24,12 @@ export const instaS3verseSkills = [
   'nodejs',
   'aws',
   'ec2',
-  's3',
   'cdn',
   'Nginx',
   'PM2',
   'orm',
+  's3',
+  'lambda',
 ];
 export const nikeCloneSkills = [
   'react',
@@ -35,4 +37,5 @@ export const nikeCloneSkills = [
   'express',
   'jquery',
   'mongodb',
+  'postgre',
 ];

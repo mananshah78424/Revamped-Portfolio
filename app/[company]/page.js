@@ -6,6 +6,39 @@ import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { companyInfo } from '@/utils/text';
 import Link from 'next/link';
+const highlightWords = (text) => {
+  const keywordColors = {
+    'GPT-3.5-turbo': 'text-purple-500 font-semibold',
+    'Gemini-1.5-pro': 'text-indigo-500 font-semibold',
+    'Large Language Model (LLM)': 'text-green-500 font-semibold',
+    'Google Cloud Platform (GCP)': 'text-blue-500 font-semibold',
+    Postgre: 'text-yellow-500 font-semibold',
+    PostgreSQL: 'text-yellow-500 font-semibold',
+    'Node.js': 'text-teal-500 font-semibold',
+    JavaScript: 'text-orange-500 font-semibold',
+    Python: 'text-red-500 font-semibold',
+    'CI/CD pipeline': 'text-pink-500 font-semibold',
+    'GCP Cloud Run': 'text-blue-400 font-semibold',
+    Docker: 'text-cyan-500 font-semibold',
+    GitHub: 'text-gray-500 font-semibold',
+    Git: 'text-emerald-500 font-semibold',
+    Agile: 'text-lime-500 font-semibold',
+    Databricks: 'text-rose-500 font-semibold',
+  };
+
+  let highlightedText = text;
+
+  Object.keys(keywordColors).forEach((word) => {
+    const regex = new RegExp(`\\b${word}\\b`, 'g');
+    highlightedText = highlightedText.replace(
+      regex,
+      `<span class="${keywordColors[word]}">${word}</span>`
+    );
+  });
+
+  return highlightedText;
+};
+
 async function getData(company) {
   return companyInfo[company] || null;
 }
@@ -37,7 +70,7 @@ export default async function CompanyPage({ params }) {
                   <div className="project_1_portfolio-header_content-wrapper">
                     <div className="project_1_portfolio-header_content-left">
                       <div className="margin-bottom margin-small">
-                        <h1 className="text-white italic">{experience.name}</h1>
+                        <h1 className="text-white">{experience.name}</h1>
                       </div>
                       <div className="proj-section-explain">
                         {experience.description}
@@ -100,7 +133,9 @@ export default async function CompanyPage({ params }) {
             <div className="padding-section-large">
               <div className="w-layout-grid project_2_feature_component">
                 <div className="project_2_feature_content-left">
-                  <h3 className="text-white text-[2rem]">{experience.mission}</h3>
+                  <h3 className="text-white text-[2rem]">
+                    {experience.mission}
+                  </h3>
                 </div>
 
                 <div className="project_2_feature_content-right">
@@ -109,11 +144,16 @@ export default async function CompanyPage({ params }) {
                       <h6 className="text-white">Deliverables</h6>
                     </div>
                     <div className="project_2_feature_text-wrapper">
-                      <p className="proj-section-explain">
+                      <ul className="list-none proj-section-explain space-y-4">
                         {experience.workDone.map((work, index) => (
-                          <li key={index}>{work}</li>
+                          <li
+                            key={index}
+                            dangerouslySetInnerHTML={{
+                              __html: `<span class="opacity-50">${index + 1}.</span> ${highlightWords(work)}`,
+                            }}
+                          />
                         ))}
-                      </p>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -123,63 +163,46 @@ export default async function CompanyPage({ params }) {
         </div>
       </section>
       {experience.keyLearnings && (
-        <div className="padding-global-proj text-white">
+        <div
+          className="padding-global-proj text-white font-light
+"
+        >
           <div className="spacer-tiny"></div>
 
           <div className="container-large">
             <div className="padding-section-large">
               <div className="max-width-large">
                 <div className="margin-bottom margin-small mt-10">
-                  <p className="proj-section-header proj-header-bottom">
-                    {experience.keyLearnings.title}
-                  </p>
                   <h1>{experience.keyLearnings.description}</h1>
                 </div>
               </div>
 
-              <div className="w-layout-grid faq12_component">
+              <div className="w-layout-grid faq12_component rubik-font">
                 <div className="faq12_item">
                   <div className="margin-bottom margin-xsmall">
-                    <div className="text-size-medium-18 text-weight-bold">
-                      Designing real applications (as opposed to className
-                      projects or visionary ideas) is{' '}
-                      <span className="text-span-37">
-                        rarely straightforward.
-                      </span>
+                    <div className="text-size-medium-18">
+                      <p
+                        className="text-span-37 text-[1.4rem]"
+                        dangerouslySetInnerHTML={{
+                          __html: highlightWords(experience.keyLearnings.title),
+                        }}
+                      />
                     </div>
                   </div>
-                  <p>
-                    In className settings or visionary concepts, you sit with an
-                    empty figma file, some preliminary research, and an open
-                    canvas. The process for 0-&gt;1 products isn't far off. In
-                    building real applications and working within an established
-                    design system, I&nbsp;had to work with pre-determined
-                    PM&nbsp;specifications, balance client and internal needs,
-                    and work within rapidly changing business needs and
-                    re/deprioritizing. This made me look with a more evaluative
-                    lens at holistic product changes and constantly communicate
-                    with my team!
-                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: highlightWords(experience.keyLearnings.firstPara),
+                    }}
+                  />
                 </div>
                 <div className="faq12_item">
-                  <div className="margin-bottom margin-xsmall">
-                    <div className="text-size-medium-18 text-weight-bold">
-                      Nothing compares to{' '}
-                      <span className="text-span-39">primary research</span> -
-                      designers are rarely the users of their own product
-                      (especially in enterprise or client-specific apps).
-                    </div>
-                  </div>
-                  <p>
-                    Enterprise and client-specific applications are unique
-                    because of the highly-tailored use cases and complex scopes.
-                    Simple onboarding flows are replaced with data integrations,
-                    unique user profiles, and robust customization. I realized
-                    the single most valuable research came from primary work and
-                    ethnographic interviews - watching user's key use cases and
-                    workflows unfold give an unparalleled look into how to build
-                    a successful product.
-                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: highlightWords(
+                        experience.keyLearnings.secondPara
+                      ),
+                    }}
+                  />
                 </div>
               </div>
             </div>
