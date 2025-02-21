@@ -75,7 +75,9 @@ const Carousel = () => {
 
   return (
     <div className="padding-top">
+      
       <div className="about_image_container">
+        
         <aside className="carousel">
           <div className="carousel__wrapper">
             {carouselImages.map((image, index) => (
@@ -85,6 +87,7 @@ const Carousel = () => {
             ))}
           </div>
         </aside>
+        
         <article className="instagram">
           <div className="hearts-container">
             {hearts.map((heart) => (
@@ -96,14 +99,15 @@ const Carousel = () => {
               />
             ))}
           </div>
-          <header className="instagram__header">
+
+          <header className="instagram__header w-full">
             <figure>
               <img
                 src={carouselText.profilePic}
                 alt="Jake Dog"
                 className="w-[60px] h-[60px] m-[10px]"
               />
-              <figcaption>
+              <figcaption className='w-full flex flex-row justify-between'>
                 <h4 className="instagram_username">
                   <FormmatedText text={carouselText.username} />
                 </h4>

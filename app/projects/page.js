@@ -1,4 +1,6 @@
 import {
+  HouseOfEvents,
+  houseofeventsmiro,
   InstaS3Verse,
   NetflixCloneVideo,
   NikeClone,
@@ -23,6 +25,8 @@ import {
   WhiteDotSVG,
   GithubIconSVG,
   WebsiteIconSVG,
+  TerraformSVG,
+  KnexSVG
 } from '@/utils/svgIcons';
 
 const TypeScriptIcon = () => TypeScriptSVG('1.2em', '1.2em');
@@ -42,6 +46,8 @@ const PythonIcon = () => PythonSVG('1.2em', '1.2em');
 const WhiteDotIcon = () => WhiteDotSVG('1.2em', '1.2em');
 const GithubIcon = () => GithubIconSVG('1.2em', '1.2em');
 const WebsiteIcon = () => WebsiteIconSVG('1.2em', '1.2em');
+const TerraformIcon = () => TerraformSVG('1.2em', '1.2em');
+const KnexIcon = () => KnexSVG('1.2em', '1.2em');
 
 // Tech stack icon mapping
 const techStackIcons = {
@@ -58,10 +64,12 @@ const techStackIcons = {
   prisma: PrismaIcon,
   springboot: SpringBootIcon,
   javascript: JavaScriptIcon,
+  terraform: TerraformIcon,
 };
 
 import './projects.css';
 import {
+  houseOfEventsSkills,
   instaS3verseSkills,
   netflixCloneSkills,
   nikeCloneSkills,
@@ -73,6 +81,17 @@ import Footer from '@/components/footer/footer';
 // Project configuration data
 const projects = [
   {
+    title: 'House Of Events',
+    description:
+      'A real-time sports notification system that updates subscribed users before a game they are interested in!! Built with a microservices architecture, where different services work together using AWS Lambda, message queues, and databases to keep things running smoothly.',
+    skills: houseOfEventsSkills,
+    image: houseofeventsmiro,
+    techStack: houseOfEventsSkills,
+    githubLink: 'https://github.com/orgs/House-of-Events/repositories',
+    area: 'Full-Stack Development',
+    websiteLink: 'https://miro.com/app/board/uXjVIfydBNM=/',
+  },
+  {
     title: 'SportingSphere',
     description:
       'SportingSphere is an app that alerts users before games start and allows them to view fixtures, teams, and player details for different sports!',
@@ -80,7 +99,7 @@ const projects = [
     image: SportingSphereImage,
     techStack: sportingSphereSkills,
     githubLink: 'https://github.com/mananshah78424/SportingSphere',
-    area: 'Full-Stack',
+    area: 'Full-Stack Development',
     websiteLink: 'https://manansportssphere.netlify.app/',
   },
   {
@@ -101,6 +120,7 @@ const projects = [
     skills: instaS3verseSkills,
     image: InstaS3Verse,
     techStack: instaS3verseSkills,
+    area: 'Full-Stack Development',
     githubLink: 'https://github.com/mananshah78424/InstaS3Verse',
     websiteLink: 'https://www.youtube.com/watch?v=rtA9n8ot7jA',
   },
@@ -110,6 +130,7 @@ const projects = [
       'The Nike Shoe Store Website is a full-stack web application designed to provide users with a delightful shopping experience for Nike shoes. Users can register, log in, browse through the available shoe collection, add items to their cart, proceed to payment, and view their purchase history. The application also offers advanced filtering options based on size, gender, and other preferences.',
     skills: nikeCloneSkills,
     image: NikeClone,
+    area: 'Full-Stack Development',
     techStack: nikeCloneSkills,
     githubLink: 'https://github.com/mananshah78424/Nike-Clone',
   },

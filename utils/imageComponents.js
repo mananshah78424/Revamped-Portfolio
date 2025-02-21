@@ -72,6 +72,38 @@ export const SportingSphereImage = () => {
   );
 };
 
+export const HouseOfEvents = () => {
+  return (
+    <img
+
+      alt="Project image"
+      loading="lazy"
+      width="2700"
+      height="2025"
+      decoding="async"
+      data-nimg="1"
+      className="h-full w-full object-cover object-top"
+      src="/images/projects/HouseOfEvents.png"
+    />
+  )
+}
+
+export const houseofeventsmiro = () => {
+
+  return (
+    <img
+      alt="Project image"
+      loading="lazy"
+      width="2700"
+      height="2025"
+      decoding="async"
+      data-nimg="1"
+      className="h-full w-full object-cover"
+      src="/images/projects/image.png"
+    />
+  )
+}
+
 export const InstaS3Verse = () => {
   return (
     <iframe

@@ -39,3 +39,19 @@ export const nikeCloneSkills = [
   'mongodb',
   'postgre',
 ];
+
+
+export const houseOfEventsSkills = [
+  'hapi',
+  'aws',
+  'terraform',
+  'knex',
+  'postgre',
+  's3',
+  'lambda',
+  'sqs',
+  'cron',
+  'selenuim',
+  'javascript',
+  'docker'
+]
