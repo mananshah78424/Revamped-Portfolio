@@ -67,7 +67,7 @@ export const SportingSphereImage = () => {
       decoding="async"
       data-nimg="1"
       className="h-full w-full object-cover object-top"
-      src="/images/projects/sportingsphere.png"
+      src="/images/sportingsphere.png"
     />
   );
 };
@@ -99,7 +99,7 @@ export const houseofeventsmiro = () => {
       decoding="async"
       data-nimg="1"
       className="h-full w-full object-cover"
-      src="/images/projects/image.png"
+      src="/images/projects/image1.png"
     />
   )
 }
